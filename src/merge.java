@@ -9,6 +9,13 @@ public class merge {
     }
 
     public int[] sort(){
-        
+        int[] arrOut = new int[arr1.length + arr2.length];
+        for(int i = 0; i < arr1.length; i++){
+            while (arr1[i] > arr2[i]){
+                arrOut[i*2] = arr2[i];
+            }
+            arrOut[i*2 + 1] = arr1[i];
+        }
+        return arrOut;
     }
 }
