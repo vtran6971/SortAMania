@@ -8,7 +8,7 @@ public class merge {
         this.arr2 = arr2;
     }
 
-    public int[] sort(){
+    public static int[] sort(int[] arr1, int[] arr2){
         int[] arrOut = new int[arr1.length + arr2.length];
         for(int i = 0; i < arr1.length; i++){
             while (arr1[i] > arr2[i]){
