@@ -152,4 +152,12 @@ public class Utilities {
         System.out.println(statement);
         return statement;
     }
+
+    public static int[] sortedArr(int count){
+        int[] arrOut = new int[count];
+        for(int i = 0; i < count; i++){
+            arrOut[i] = i;
+        }
+        return arrOut;
+    }
 }
