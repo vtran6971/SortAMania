@@ -122,18 +122,17 @@ public class Utilities {
     }
 
     //Checks through the int array to see if elements are sorted from least to greatest
-    public static String isSorted(int[] arr)
+    public static boolean isSorted(int[] arr)
     {
-        String statement = "The array is sorted";
+        boolean statement = true;
 
-        for(int i = 0;  i < arr.length-1; i += 2)
+        for(int i = 0;  i < arr.length-2; i += 2)
         {
-            if(arr[i] > arr[i+1])
+            if(arr[i] > arr[i+2])
             {
-                statement = "The array is not sorted";
+                statement = false;
             }
         }
-        System.out.println(statement);
         return statement;
     }
 
@@ -159,5 +158,12 @@ public class Utilities {
             arrOut[i] = i;
         }
         return arrOut;
+    }
+
+    public static void printIntArr(int[] arr){
+        System.out.println();
+        for(int num : arr){
+            System.out.print(num + ", ");
+        }
     }
 }
