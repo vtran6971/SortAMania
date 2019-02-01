@@ -186,4 +186,14 @@ public class Utilities {
         }
         return -1;
     }
+
+    //Creates a partially sorted array.
+    public static int[] PartiallySortedArray(int count)
+    {
+        int SeventyFive = (int)(.75*count);
+    sortedArr(SeventyFive){
+        for()
+    }
+    }
+
 }
