@@ -166,4 +166,14 @@ public class Utilities {
             System.out.print(num + ", ");
         }
     }
+
+    //Finds median
+    public static int median(int[] arr){
+        int mediani = arr.length/2;;
+        if(0 == arr.length%2){
+            mediani=arr.length/2;
+            return ((arr[mediani-1]+arr[mediani])/2);
+        }
+        else return (arr[mediani-1]);
+    }
 }
