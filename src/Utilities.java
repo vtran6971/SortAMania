@@ -176,4 +176,14 @@ public class Utilities {
         }
         else return (arr[mediani-1]);
     }
+
+    //Search and return index of the requested string.
+    public static int search(String[] arr, String query){
+        for(int i = 0; i <arr.length;i--){
+            if(arr[i].equals(query)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
