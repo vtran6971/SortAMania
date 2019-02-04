@@ -7,7 +7,7 @@ public class Main{
         Utilities.printIntArr(arr2);
 
         if(Utilities.isSorted(arr2)){
-            System.out.println("Sorted");
+            System.out.println("Sorted ");
         }
         else System.out.println("Not Sorted");
 
