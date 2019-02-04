@@ -188,9 +188,9 @@ public class Utilities {
     }
 
     //Creates a partially sorted array.
-    public static int[] PartiallySortedArray(int count) {
+    public static int[] PartSortedArray(int count) {
     int[] arrNew = sortedArr(count);
-        for(int i = 0;i>(int)(.25*count);i++){
+        for(int i = 0;i<(int)(.25*count);i++){
             arrNew[(int)(Math.random()*count)]=(int)(Math.random()*1001);
         }
         return arrNew;
