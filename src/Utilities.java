@@ -121,10 +121,7 @@ public class Utilities {
         return statement;
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Checks through the int array to see if elements are sorted from least to greatest
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     public static boolean isSorted(int[] arr)
     {
         boolean statement = true;
@@ -139,21 +136,6 @@ public class Utilities {
         return statement;
     }
 
-    public static boolean isSortedString(String[] array)
-    {
-        boolean sorted = true;
-        for (int i = 0; i < array.length-2; i += 2)
-        {
-            if(array[i].compareTo(array[i+1]) > 0)
-            {
-                sorted = false;
-                i = array.length;
-            }
-        }
-        return sorted;
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Checks through the array to see if elements are sorted from least to greatest
     public static String doubleisSorted(double[] arr)
     {
@@ -195,7 +177,6 @@ public class Utilities {
         else return (arr[mediani-1]);
     }
 
-
     //Search and return index of the requested string.
     public static int search(String[] arr, String query){
         for(int i = 0; i <arr.length;i--){
@@ -214,4 +195,19 @@ public class Utilities {
         }
         return arrNew;
     }
+
+    public static boolean isSortedString(String[] array)
+    {
+        boolean sorted = true;
+        for (int i = 0; i < array.length-2; i += 2)
+        {
+            if(array[i].compareTo(array[i+1]) > 0)
+            {
+                sorted = false
+                i = array.length;
+            }
+        }
+        return sorted;
+    }
+
 }
