@@ -203,7 +203,7 @@ public class Utilities {
         {
             if(array[i].compareTo(array[i+1]) > 0)
             {
-                sorted = false
+                sorted = false;
                 i = array.length;
             }
         }
