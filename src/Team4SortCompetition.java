@@ -94,7 +94,7 @@ private int[] arr;
             while (arr[i] < arr[i + 1]){
                 int[] smallList = new int[] {arr[i], arr[i + 1]};
                 merge merger = new merge(smallList, sorted);
-                sorted = merger.sort();
+                sorted = sort();
                 i += 2;
             }
         }
