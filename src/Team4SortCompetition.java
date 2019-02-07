@@ -24,10 +24,104 @@ public class Team4SortCompetition extends SortCompetition{
         return 0;
     }
 
+////////////////////////////////////////////////////Main////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Utilities
+
+////////////////////////////////////////////////////Merge///////////////////////////////////////////////////////////////
+private static int[] arr1;
+    private static int[] arr2;
+    private int[] arrOut;
+
+    public Team4SortCompetition(int[] arr1, int[] arr2){
+        this.arr1 = arr1;
+        this.arr2 = arr2;
+        this.arrOut = new int[arr1.length + arr2.length];
+    }
+
+    public static int[] MergeSort(){
+        int[] arrOut = new int[arr1.length + arr2.length];
+        int i = 0;
+        int j = 0;
+        while (i + j < arrOut.length) {
+            if (i > arr1.length){
+                for (; j < arr2.length; j++){
+                    arrOut[j + i] = arr2[j];
+                }
+            }
+            else if(j > arr2.length){
+                for (; i < arr1.length; i++){
+                    arrOut[j + i] = arr1[i];
+                }
+            }
+            else if (arr1[i] >= arr2[j]) {
+                arrOut[i + j] = arr1[i];
+                i++;
+            } else {
+                arrOut[i + j] = arr2[j];
+                j++;
+            }
+        }
+        return arrOut;
+    }
+
+//////////////////////////////////////////////////CustomSort////////////////////////////////////////////////////////////
+private int[] arr;
+
+    public Team4SortCompetition(int[] arr){
+        this.arr = arr;
+    }
+
+    public int[] sort(){
+        int[] sorted = new int[arr.length];
+        for (int i = 0; i < arr.length; i++){
+            while (arr[i] < arr[i + 1]){
+                int[] smallList = new int[] {arr[i], arr[i + 1]};
+                merge merger = new merge(smallList, sorted);
+                sorted = merger.sort();
+                i += 2;
+            }
+        }
+        return sorted;
+    }
+
+//////////////////////////////////////////////////Insertion/////////////////////////////////////////////////////////////
+public static void insertionSort(int[] arr)
+{
+    int count = 0;
+    int indexToInsert = 0;
+    int insertMin = 0;
+
+    //First for loop checks through the array to find the insertion candidates
+    for (int i = 1; i < arr.length; i++)
+    {
+        //Insertion candidates are checked against all previous indexes
+        for (int j = i-1; j >= 0; j--)
+        {
+            //if the candidate is less than the previous index, increment counter
+            if(arr[i] < arr[j]) {
+                count++;
+            }
+            else
+            {
+                j = -1;
+            }
+            insertMin = arr[i];
+            indexToInsert = i-count;
+        }
+        //Runs while there are still shifts needed to be made to make room for insertion candidate
+        while(count > 0) {
+            arr[i] = arr[i-1];
+            if(count == 1)
+            {
+                arr[indexToInsert] = insertMin;
+            }
+            i--;
+            count--;
+        }
+    }
+}
+
+//////////////////////////////////////////////////Utilities/////////////////////////////////////////////////////////////
 
     //Swaps the value of the current index with the next index's value
     public static void swap(int[] arr, int i) {
@@ -239,5 +333,6 @@ public class Team4SortCompetition extends SortCompetition{
         }
         return sorted;
     }
+
 }
 
