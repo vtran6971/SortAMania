@@ -315,7 +315,7 @@ public static void insertionSort(int[] arr)
             mediani=arr.length/2;
             return ((arr[mediani-1]+arr[mediani])/2);
         }
-        else return (arr[mediani-1]);
+        else return (arr[mediani]);
     }
 
     //Search and return index of the requested string.
