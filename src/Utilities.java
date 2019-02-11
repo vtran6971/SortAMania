@@ -7,6 +7,13 @@ public class Utilities {
         arr[i] = hold;
     }
 
+    public static void targetSwap(int[] arr, int i, int j){
+        int hold;
+        hold = arr[j];
+        arr[j] = arr[i];
+        arr[i] = hold;
+    }
+
     //Swaps the string at the current index with the next index's string
     public static void swapString(String[] arr, int i)
     {
