@@ -348,8 +348,17 @@ public static void insertionSort(int[] arr)
         return sorted;
     }
 
-    public static int[] incert(int[] arr1, int arr2, int i){
-
+    public static void bubbleSortStrings (String[] array)
+    {
+        int test;
+        for (int j = 1; j < array.length; j++) {
+            for (int i = 0; i != array.length - 1; i++) {
+                test = array[i].compareTo(array[i + 1]);
+                if (test > 0) {
+                    swapString(array, i);
+                }
+            }
+        }
     }
 }
 
