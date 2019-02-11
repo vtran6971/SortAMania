@@ -24,23 +24,6 @@ public class Team4SortCompetition extends SortCompetition{
         return 0;
     }
 
-////////////////////////////////////////////////////Main////////////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////SimpleMerge////////////////////////////////////////////////////////////
-
-    public static int[] simpleMerge(int[] arr1, int[] arr2) {
-    int[] arr3 = new int[arr1.length+arr2.length];
-    //int i =0,j=0,k=0;
-    for (int i = 0; i < arr2.length;i++){
-        for(int j = 0;j < arr1.length;j++){
-            if (arr1[j]>arr2[i]){
-
-            }
-        }
-    }
-    return arr3;
-}
-
 ////////////////////////////////////////////////////Merge///////////////////////////////////////////////////////////////
 private static int[] arr1;
     private static int[] arr2;
